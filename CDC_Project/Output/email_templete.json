@@ -1,0 +1,37 @@
+{
+    "definition": {
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "inputs": {
+            "schema": {
+              "properties": {
+                "table": { "type": "string" },
+                "status": { "type": "string" },
+                "timestamp": { "type": "string" },
+                "file": { "type": "string" }
+              },
+              "type": "object"
+            }
+          }
+        }
+      },
+      "actions": {
+        "Send_email": {
+          "type": "ApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "outlook365",
+              "operationId": "SendEmailV2"
+            },
+            "parameters": {
+              "to": "bhairavatarde2003@gmail.com",
+              "subject": "✅ CDC Pipeline Successful - @{triggerBody()?['table']}",
+              "body": "The CDC pipeline completed successfully for @{triggerBody()?['table']} at @{triggerBody()?['timestamp']}. File: @{triggerBody()?['file']}"
+            }
+          }
+        }
+      }
+    }
+  }
+  

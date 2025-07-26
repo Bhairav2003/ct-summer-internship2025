@@ -1,0 +1,28 @@
+{
+  "name": "Hourly_CDC_Trigger",
+  "properties": {
+    "description": "Runs the CDC pipeline every hour",
+    "annotations": [],
+    "runtimeState": "Started",
+    "pipelines": [
+      {
+        "pipelineReference": {
+          "type": "PipelineReference",
+          "referenceName": "pipeline1"  
+        },
+        "parameters": {
+          "tableList": ["Customers", "Products", "Orders", "Inventory"]
+        }
+      }
+    ],
+    "type": "ScheduleTrigger",
+    "typeProperties": {
+      "recurrence": {
+        "frequency": "Hour",
+        "interval": 1,
+        "startTime": "2025-07-22T00:00:00Z",
+        "timeZone": "India Standard Time"
+      }
+    }
+  }
+}

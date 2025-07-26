@@ -1,0 +1,54 @@
+{
+    "name": "cdc_etl_job",
+    "tasks": [
+      {
+        "task_key": "cdc_pipeline_task",
+        "notebook_task": {
+          "notebook_path": "/Workspace/Users/bhairav.az1@outlook.com/CDC_Pipeline",
+          "base_parameters": {
+            "source_table": "CUST_MSTR",
+            "target_path": "/mnt/datalake/cdc_output/CUST_MSTR"
+          }
+        },
+        "existing_cluster_id": "0723-172019-tcte18rf",
+        "timeout_seconds": 3600
+      }
+    ],
+    "job_clusters": [
+      {
+        "job_cluster_key": "cdc_cluster",
+        "new_cluster": {
+          "spark_version": "13.3.x-scala2.12",
+          "node_type_id": "Standard_DS3_v2",
+          "num_workers": 2,
+          "spark_conf": {
+            "spark.databricks.delta.preview.enabled": "true"
+          },
+          "azure_attributes": {
+            "availability": "ON_DEMAND_AZURE",
+            "first_on_demand": 1,
+            "spot_bid_max_price": -1
+          },
+          "custom_tags": {
+            "Project": "CDC_Pipeline"
+          }
+        }
+      }
+    ],
+    "email_notifications": {
+      "on_success": [
+        "bhairavatarde2003@gmail.com"
+      ],
+      "on_failure": [
+        "bhairavatarde2003@gmail.com"
+      ]
+    },
+    "timeout_seconds": 3600,
+    "max_concurrent_runs": 1,
+    "schedule": {
+      "quartz_cron_expression": "0 0 * * * ?",
+      "timezone_id": "Asia/Kolkata",
+      "pause_status": "UNPAUSED"
+    }
+  }
+  
