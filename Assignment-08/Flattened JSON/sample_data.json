@@ -1,0 +1,89 @@
+{
+    "records": [
+      {
+        "id": "001",
+        "name": "Alice",
+        "location": { "city": "New York", "zip": "10001" },
+        "purchases": [
+          { "item": "Book", "price": 20 },
+          { "item": "Pen", "price": 5 }
+        ]
+      },
+      {
+        "id": "002",
+        "name": "Bob",
+        "location": { "city": "Chicago", "zip": "60601" },
+        "purchases": [
+          { "item": "Notebook", "price": 10 }
+        ]
+      },
+      {
+        "id": "003",
+        "name": "Charlie",
+        "location": { "city": "Los Angeles", "zip": "90001" },
+        "purchases": [
+          { "item": "Laptop", "price": 900 },
+          { "item": "Mouse", "price": 25 }
+        ]
+      },
+      {
+        "id": "004",
+        "name": "Diana",
+        "location": { "city": "Houston", "zip": "77001" },
+        "purchases": [
+          { "item": "Bag", "price": 50 }
+        ]
+      },
+      {
+        "id": "005",
+        "name": "Ethan",
+        "location": { "city": "Phoenix", "zip": "85001" },
+        "purchases": [
+          { "item": "Chair", "price": 100 },
+          { "item": "Desk", "price": 200 }
+        ]
+      },
+      {
+        "id": "006",
+        "name": "Fiona",
+        "location": { "city": "Philadelphia", "zip": "19101" },
+        "purchases": [
+          { "item": "Monitor", "price": 300 }
+        ]
+      },
+      {
+        "id": "007",
+        "name": "George",
+        "location": { "city": "San Antonio", "zip": "78201" },
+        "purchases": [
+          { "item": "Phone", "price": 600 },
+          { "item": "Charger", "price": 20 }
+        ]
+      },
+      {
+        "id": "008",
+        "name": "Hannah",
+        "location": { "city": "San Diego", "zip": "92101" },
+        "purchases": [
+          { "item": "Keyboard", "price": 75 }
+        ]
+      },
+      {
+        "id": "009",
+        "name": "Ian",
+        "location": { "city": "Dallas", "zip": "75201" },
+        "purchases": [
+          { "item": "Tablet", "price": 400 }
+        ]
+      },
+      {
+        "id": "010",
+        "name": "Julia",
+        "location": { "city": "San Jose", "zip": "95101" },
+        "purchases": [
+          { "item": "Camera", "price": 700 },
+          { "item": "Tripod", "price": 80 }
+        ]
+      }
+    ]
+  }
