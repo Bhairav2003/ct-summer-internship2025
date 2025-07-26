@@ -38,7 +38,7 @@ def process_and_write(table_name):
     df.write.format("delta").mode("append").save(f"{adls_base_path}/{table_name}")
     print(f"✅ {table_name} written to Delta Lake.")
 
-tables = ["Customer", "Product", "OrderTbl", "Inventory"]
+tables = ["Customers", "Products", "Orders", "Inventory"]
 
 for tbl in tables:
     process_and_write(tbl)
